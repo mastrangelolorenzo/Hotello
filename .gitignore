@@ -1,0 +1,51 @@
+# --- Ambiente ---
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# --- Backend (Gradle / Java) ---
+backend/build/
+backend/.gradle/
+backend/bin/
+backend/out/
+!backend/gradle/wrapper/gradle-wrapper.jar
+hs_err_pid*
+replay_pid*
+
+# --- Frontend (Next.js / Node) ---
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.vercel/
+frontend/next-env.d.ts
+frontend/*.tsbuildinfo
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# --- Test e coverage ---
+backend/target/site/
+frontend/coverage/
+frontend/playwright-report/
+frontend/test-results/
+
+# --- IDE ---
+.idea/
+*.iml
+*.iws
+.vscode/*
+!.vscode/extensions.json
+.settings/
+.classpath
+.project
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Docker / dati locali ---
+docker-compose.override.yml
+pgdata/
+*.dump
