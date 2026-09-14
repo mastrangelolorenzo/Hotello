@@ -1,0 +1,624 @@
+{
+  "it": {
+    "setup": {
+      "welcome": "Configurazione Hotello",
+      "nav": {
+        "previous": "Indietro",
+        "next": "Avanti",
+        "skip": "Salta per ora"
+      },
+      "common": {
+        "from": "Da",
+        "to": "A"
+      },
+      "skippableNotice": "Puoi saltare questo passaggio e completarlo più tardi.",
+      "unlock": {
+        "title": "Sblocco installazione",
+        "description": "Inserisci il token letto dai log del container per iniziare la configurazione guidata.",
+        "tokenLabel": "Token di sblocco",
+        "continueButton": "Sblocca e continua"
+      },
+      "steps": {
+        "adminAccount": "Account admin",
+        "property": "La struttura",
+        "fiscalData": "Dati fiscali",
+        "rooms": "Camere",
+        "rates": "Tariffe",
+        "policy": "Policy",
+        "payments": "Pagamenti",
+        "email": "Email",
+        "appearance": "Aspetto del sito",
+        "closing": "Chiusura"
+      },
+      "forms": {
+        "adminAccount": {
+          "title": "Account amministratore",
+          "email": "Email",
+          "password": "Password",
+          "confirmPassword": "Conferma password",
+          "passwordMismatch": "Le password non coincidono.",
+          "firstName": "Nome",
+          "lastName": "Cognome",
+          "interfaceLanguage": "Lingua interfaccia",
+          "interfaceLanguageOptions": {
+            "it": "Italiano",
+            "en": "Inglese"
+          },
+          "timezone": "Fuso orario"
+        },
+        "property": {
+          "identity": {
+            "title": "Identità della struttura",
+            "commercialName": "Nome commerciale",
+            "type": "Tipologia",
+            "typeOptions": {
+              "hotel": "Hotel",
+              "bnb": "B&B",
+              "guesthouse": "Affittacamere",
+              "vacationHome": "Casa vacanze"
+            },
+            "starRating": "Numero stelle (opzionale)",
+            "shortDescription": "Descrizione breve (max 160 caratteri, diventa la meta description)",
+            "longDescription": "Descrizione estesa"
+          },
+          "location": {
+            "title": "Indirizzo",
+            "address": "Via e numero civico",
+            "confirmAddress": "Conferma indirizzo",
+            "editAddress": "Modifica indirizzo",
+            "addressConfirmed": "Indirizzo confermato",
+            "confirmRequiredMessage": "Conferma l'indirizzo sulla mappa prima di continuare.",
+            "missingApiKey": "Chiave API di Google Maps non configurata: imposta NEXT_PUBLIC_GOOGLE_MAPS_API_KEY."
+          },
+          "contacts": {
+            "title": "Contatti",
+            "phone": "Telefono",
+            "publicEmail": "Email pubblica",
+            "existingWebsite": "Sito web esistente (opzionale)"
+          }
+        },
+        "fiscalData": {
+          "fiscal": {
+            "title": "Dati fiscali e adempimenti",
+            "companyName": "Ragione sociale",
+            "vatNumber": "Partita IVA",
+            "taxCode": "Codice fiscale",
+            "legalAddress": "Sede legale (se diversa)",
+            "vatRegime": "Regime IVA",
+            "accommodationVatRate": "Aliquota alloggio",
+            "sdiOrPec": "Codice SDI o PEC per la fatturazione elettronica"
+          },
+          "identifiers": {
+            "title": "Codici identificativi",
+            "cin": "CIN (Codice Identificativo Nazionale)",
+            "cir": "CIR o codice regionale",
+            "istatCode": "Codice ISTAT",
+            "note": "Questi codici cambiano più spesso e variano da regione a regione: verifica i requisiti aggiornati sul portale della tua regione prima di renderli obbligatori nel form."
+          },
+          "alloggiatiWeb": {
+            "title": "Credenziali Alloggiati Web",
+            "username": "Utente",
+            "password": "Password",
+            "wsKey": "WS Key"
+          },
+          "touristTax": {
+            "title": "Tassa di soggiorno",
+            "active": "Tassa di soggiorno attiva",
+            "amountPerPersonPerNight": "Importo per persona a notte",
+            "maxTaxableNights": "Numero massimo di notti tassabili",
+            "exemptionAgeUnder": "Età esenzione sotto",
+            "exemptions": "Esenzioni"
+          }
+        },
+        "rooms": {
+          "types": {
+            "title": "Tipologie di camera",
+            "addButton": "Aggiungi tipologia",
+            "removeButton": "Rimuovi",
+            "emptyHint": "Nessuna tipologia aggiunta.",
+            "name": "Nome",
+            "description": "Descrizione",
+            "standardOccupancy": "Occupazione standard",
+            "maxOccupancy": "Occupazione massima",
+            "bedCount": "Numero letti",
+            "surfaceSqm": "Superficie (mq)",
+            "amenities": "Servizi",
+            "amenityOptions": {
+              "wifi": "Wifi",
+              "ac": "Aria condizionata",
+              "balcony": "Balcone",
+              "seaView": "Vista mare",
+              "privateBathroom": "Bagno privato"
+            },
+            "photos": "Foto (almeno una)"
+          },
+          "units": {
+            "title": "Unità",
+            "addButton": "Aggiungi unità",
+            "removeButton": "Rimuovi",
+            "emptyHint": "Nessuna unità aggiunta.",
+            "numberOrName": "Numero o nome",
+            "floor": "Piano",
+            "roomType": "Tipologia",
+            "selectTypePlaceholder": "Seleziona tipologia",
+            "internalNotes": "Note interne",
+            "active": "Attiva"
+          }
+        },
+        "rates": {
+          "title": "Tariffe",
+          "noRoomTypesHint": "Aggiungi almeno una tipologia di camera nel passaggio precedente per impostare le tariffe.",
+          "basePrice": "Prezzo base a notte",
+          "currency": "Valuta",
+          "extraGuestPrice": "Prezzo per ospite extra",
+          "minStayNights": "Soggiorno minimo (notti)",
+          "breakfastIncluded": "Colazione inclusa",
+          "breakfastPrice": "Prezzo colazione"
+        },
+        "policy": {
+          "schedule": {
+            "title": "Orari",
+            "checkIn": "Check-in",
+            "checkOutBy": "Check-out entro"
+          },
+          "cancellation": {
+            "title": "Cancellazione e caparra",
+            "cancellationPolicy": "Politica di cancellazione",
+            "cancellationOptions": {
+              "flexible": "Flessibile",
+              "moderate": "Moderata",
+              "strict": "Rigida"
+            },
+            "freeCancellationDays": "Giorni di cancellazione gratuita",
+            "penaltyPercentage": "Penale (%)",
+            "depositRequired": "Caparra richiesta",
+            "depositPercentage": "Caparra (%)"
+          },
+          "other": {
+            "title": "Altre condizioni",
+            "petsAllowed": "Animali ammessi",
+            "smokingAllowed": "Fumatori",
+            "minCheckInAge": "Età minima per il check-in",
+            "termsText": "Termini e condizioni"
+          }
+        },
+        "payments": {
+          "skipHint": "Se salti questo passaggio, il sito raccoglierà richieste di prenotazione da confermare a mano.",
+          "mode": "Modalità",
+          "modeOptions": {
+            "requestOnly": "Solo richiesta di prenotazione",
+            "onlineDeposit": "Caparra online",
+            "fullPayment": "Pagamento intero"
+          },
+          "stripe": {
+            "title": "Stripe",
+            "publishableKey": "Publishable key",
+            "secretKey": "Secret key",
+            "webhookSecret": "Webhook secret"
+          },
+          "bankTransfer": {
+            "title": "Bonifico bancario",
+            "accepted": "Accetta bonifico",
+            "iban": "IBAN",
+            "accountHolder": "Intestatario"
+          },
+          "payAtProperty": "Pagamento in struttura"
+        },
+        "email": {
+          "smtp": {
+            "title": "Server SMTP",
+            "host": "Host SMTP",
+            "port": "Porta SMTP",
+            "user": "Utente SMTP",
+            "password": "Password SMTP",
+            "tls": "TLS"
+          },
+          "sender": {
+            "title": "Mittente e notifiche",
+            "address": "Indirizzo mittente",
+            "name": "Nome mittente",
+            "internalNotificationsEmail": "Email per le notifiche interne"
+          },
+          "signature": "Firma"
+        },
+        "appearance": {
+          "branding": {
+            "title": "Branding",
+            "logo": "Logo",
+            "favicon": "Favicon",
+            "heroImage": "Immagine hero",
+            "primaryColor": "Colore primario",
+            "secondaryColor": "Colore secondario"
+          },
+          "hero": {
+            "title": "Sezione hero",
+            "heroTitle": "Titolo hero",
+            "heroSubtitle": "Sottotitolo"
+          },
+          "languages": {
+            "title": "Lingue",
+            "activeLanguages": "Lingue attive",
+            "options": {
+              "it": "Italiano",
+              "en": "Inglese"
+            }
+          },
+          "social": {
+            "title": "Social",
+            "facebook": "Facebook",
+            "instagram": "Instagram",
+            "twitter": "Twitter / X"
+          },
+          "other": {
+            "title": "Altro",
+            "analyticsCode": "Codice analytics (opzionale)",
+            "cookieBannerText": "Testo cookie banner"
+          }
+        },
+        "closing": {
+          "summaryTitle": "Riepilogo",
+          "summaryHint": "Controlla i dati inseriti nei passaggi precedenti prima di completare la configurazione.",
+          "demoDataCheckbox": "Popola con dati dimostrativi",
+          "finishButton": "Completa configurazione"
+        }
+      }
+    },
+    "home": {
+      "nav": {
+        "rooms": "Camere",
+        "about": "La struttura",
+        "location": "Dove siamo",
+        "contact": "Contatti",
+        "bookCta": "Richiedi disponibilità"
+      },
+      "hero": {
+        "ctaPrimary": "Richiedi disponibilità",
+        "ctaSecondary": "Scopri le camere"
+      },
+      "about": {
+        "title": "La struttura"
+      },
+      "rooms": {
+        "title": "Le nostre camere",
+        "perNight": "a notte",
+        "extraGuestPrice": "a ospite extra",
+        "minStayPrefix": "Soggiorno minimo",
+        "nights": "notti",
+        "breakfastIncluded": "Colazione inclusa",
+        "empty": "Le camere saranno disponibili a breve."
+      },
+      "location": {
+        "title": "Dove siamo"
+      },
+      "policy": {
+        "title": "Informazioni utili",
+        "checkIn": "Check-in",
+        "checkOut": "Check-out",
+        "cancellation": "Politica di cancellazione",
+        "depositRequired": "Caparra richiesta",
+        "petsAllowed": "Animali ammessi",
+        "smokingAllowed": "Fumatori ammessi"
+      },
+      "contact": {
+        "title": "Contatti",
+        "phone": "Telefono",
+        "email": "Email",
+        "address": "Indirizzo"
+      },
+      "footer": {
+        "rights": "Tutti i diritti riservati."
+      }
+    }
+  },
+  "en": {
+    "setup": {
+      "welcome": "Hotello setup",
+      "nav": {
+        "previous": "Back",
+        "next": "Next",
+        "skip": "Skip for now"
+      },
+      "common": {
+        "from": "From",
+        "to": "To"
+      },
+      "skippableNotice": "You can skip this step and complete it later.",
+      "unlock": {
+        "title": "Installation unlock",
+        "description": "Enter the token read from the container logs to start the guided setup.",
+        "tokenLabel": "Unlock token",
+        "continueButton": "Unlock and continue"
+      },
+      "steps": {
+        "adminAccount": "Admin account",
+        "property": "Property",
+        "fiscalData": "Fiscal data",
+        "rooms": "Rooms",
+        "rates": "Rates",
+        "policy": "Policy",
+        "payments": "Payments",
+        "email": "Email",
+        "appearance": "Site appearance",
+        "closing": "Closing"
+      },
+      "forms": {
+        "adminAccount": {
+          "title": "Administrator account",
+          "email": "Email",
+          "password": "Password",
+          "confirmPassword": "Confirm password",
+          "passwordMismatch": "Passwords do not match.",
+          "firstName": "First name",
+          "lastName": "Last name",
+          "interfaceLanguage": "Interface language",
+          "interfaceLanguageOptions": {
+            "it": "Italian",
+            "en": "English"
+          },
+          "timezone": "Timezone"
+        },
+        "property": {
+          "identity": {
+            "title": "Property identity",
+            "commercialName": "Trade name",
+            "type": "Type",
+            "typeOptions": {
+              "hotel": "Hotel",
+              "bnb": "B&B",
+              "guesthouse": "Guesthouse",
+              "vacationHome": "Vacation home"
+            },
+            "starRating": "Star rating (optional)",
+            "shortDescription": "Short description (max 160 characters, becomes the meta description)",
+            "longDescription": "Long description"
+          },
+          "location": {
+            "title": "Address",
+            "address": "Street and house number",
+            "confirmAddress": "Confirm address",
+            "editAddress": "Edit address",
+            "addressConfirmed": "Address confirmed",
+            "confirmRequiredMessage": "Confirm the address on the map before continuing.",
+            "missingApiKey": "Google Maps API key not configured: set NEXT_PUBLIC_GOOGLE_MAPS_API_KEY."
+          },
+          "contacts": {
+            "title": "Contacts",
+            "phone": "Phone",
+            "publicEmail": "Public email",
+            "existingWebsite": "Existing website (optional)"
+          }
+        },
+        "fiscalData": {
+          "fiscal": {
+            "title": "Fiscal and administrative data",
+            "companyName": "Company name",
+            "vatNumber": "VAT number",
+            "taxCode": "Tax code",
+            "legalAddress": "Registered office address (if different)",
+            "vatRegime": "VAT regime",
+            "accommodationVatRate": "Accommodation VAT rate",
+            "sdiOrPec": "SDI code or PEC for e-invoicing"
+          },
+          "identifiers": {
+            "title": "Identification codes",
+            "cin": "CIN (National Identification Code)",
+            "cir": "CIR or regional code",
+            "istatCode": "ISTAT code",
+            "note": "These codes change most often and vary by region: check the current requirements on your region's portal before making them mandatory in the form."
+          },
+          "alloggiatiWeb": {
+            "title": "Alloggiati Web credentials",
+            "username": "Username",
+            "password": "Password",
+            "wsKey": "WS Key"
+          },
+          "touristTax": {
+            "title": "Tourist tax",
+            "active": "Tourist tax active",
+            "amountPerPersonPerNight": "Amount per person per night",
+            "maxTaxableNights": "Maximum taxable nights",
+            "exemptionAgeUnder": "Exemption age under",
+            "exemptions": "Exemptions"
+          }
+        },
+        "rooms": {
+          "types": {
+            "title": "Room types",
+            "addButton": "Add type",
+            "removeButton": "Remove",
+            "emptyHint": "No room type added yet.",
+            "name": "Name",
+            "description": "Description",
+            "standardOccupancy": "Standard occupancy",
+            "maxOccupancy": "Maximum occupancy",
+            "bedCount": "Number of beds",
+            "surfaceSqm": "Surface (sqm)",
+            "amenities": "Amenities",
+            "amenityOptions": {
+              "wifi": "Wifi",
+              "ac": "Air conditioning",
+              "balcony": "Balcony",
+              "seaView": "Sea view",
+              "privateBathroom": "Private bathroom"
+            },
+            "photos": "Photos (at least one)"
+          },
+          "units": {
+            "title": "Units",
+            "addButton": "Add unit",
+            "removeButton": "Remove",
+            "emptyHint": "No unit added yet.",
+            "numberOrName": "Number or name",
+            "floor": "Floor",
+            "roomType": "Room type",
+            "selectTypePlaceholder": "Select a room type",
+            "internalNotes": "Internal notes",
+            "active": "Active"
+          }
+        },
+        "rates": {
+          "title": "Rates",
+          "noRoomTypesHint": "Add at least one room type in the previous step to set up rates.",
+          "basePrice": "Base price per night",
+          "currency": "Currency",
+          "extraGuestPrice": "Extra guest price",
+          "minStayNights": "Minimum stay (nights)",
+          "breakfastIncluded": "Breakfast included",
+          "breakfastPrice": "Breakfast price"
+        },
+        "policy": {
+          "schedule": {
+            "title": "Hours",
+            "checkIn": "Check-in",
+            "checkOutBy": "Check-out by"
+          },
+          "cancellation": {
+            "title": "Cancellation and deposit",
+            "cancellationPolicy": "Cancellation policy",
+            "cancellationOptions": {
+              "flexible": "Flexible",
+              "moderate": "Moderate",
+              "strict": "Strict"
+            },
+            "freeCancellationDays": "Free cancellation days",
+            "penaltyPercentage": "Penalty (%)",
+            "depositRequired": "Deposit required",
+            "depositPercentage": "Deposit (%)"
+          },
+          "other": {
+            "title": "Other conditions",
+            "petsAllowed": "Pets allowed",
+            "smokingAllowed": "Smoking allowed",
+            "minCheckInAge": "Minimum check-in age",
+            "termsText": "Terms and conditions"
+          }
+        },
+        "payments": {
+          "skipHint": "If you skip this step, the site will collect booking requests to confirm manually.",
+          "mode": "Mode",
+          "modeOptions": {
+            "requestOnly": "Booking request only",
+            "onlineDeposit": "Online deposit",
+            "fullPayment": "Full payment"
+          },
+          "stripe": {
+            "title": "Stripe",
+            "publishableKey": "Publishable key",
+            "secretKey": "Secret key",
+            "webhookSecret": "Webhook secret"
+          },
+          "bankTransfer": {
+            "title": "Bank transfer",
+            "accepted": "Accept bank transfer",
+            "iban": "IBAN",
+            "accountHolder": "Account holder"
+          },
+          "payAtProperty": "Pay at property"
+        },
+        "email": {
+          "smtp": {
+            "title": "SMTP server",
+            "host": "SMTP host",
+            "port": "SMTP port",
+            "user": "SMTP user",
+            "password": "SMTP password",
+            "tls": "TLS"
+          },
+          "sender": {
+            "title": "Sender and notifications",
+            "address": "Sender address",
+            "name": "Sender name",
+            "internalNotificationsEmail": "Internal notifications email"
+          },
+          "signature": "Signature"
+        },
+        "appearance": {
+          "branding": {
+            "title": "Branding",
+            "logo": "Logo",
+            "favicon": "Favicon",
+            "heroImage": "Hero image",
+            "primaryColor": "Primary color",
+            "secondaryColor": "Secondary color"
+          },
+          "hero": {
+            "title": "Hero section",
+            "heroTitle": "Hero title",
+            "heroSubtitle": "Subtitle"
+          },
+          "languages": {
+            "title": "Languages",
+            "activeLanguages": "Active languages",
+            "options": {
+              "it": "Italian",
+              "en": "English"
+            }
+          },
+          "social": {
+            "title": "Social",
+            "facebook": "Facebook",
+            "instagram": "Instagram",
+            "twitter": "Twitter / X"
+          },
+          "other": {
+            "title": "Other",
+            "analyticsCode": "Analytics code (optional)",
+            "cookieBannerText": "Cookie banner text"
+          }
+        },
+        "closing": {
+          "summaryTitle": "Summary",
+          "summaryHint": "Review the data entered in the previous steps before completing the setup.",
+          "demoDataCheckbox": "Populate with demo data",
+          "finishButton": "Complete setup"
+        }
+      }
+    },
+    "home": {
+      "nav": {
+        "rooms": "Rooms",
+        "about": "About",
+        "location": "Location",
+        "contact": "Contact",
+        "bookCta": "Check availability"
+      },
+      "hero": {
+        "ctaPrimary": "Check availability",
+        "ctaSecondary": "See rooms"
+      },
+      "about": {
+        "title": "About us"
+      },
+      "rooms": {
+        "title": "Our rooms",
+        "perNight": "per night",
+        "extraGuestPrice": "per extra guest",
+        "minStayPrefix": "Minimum stay",
+        "nights": "nights",
+        "breakfastIncluded": "Breakfast included",
+        "empty": "Rooms will be available soon."
+      },
+      "location": {
+        "title": "Where we are"
+      },
+      "policy": {
+        "title": "Good to know",
+        "checkIn": "Check-in",
+        "checkOut": "Check-out",
+        "cancellation": "Cancellation policy",
+        "depositRequired": "Deposit required",
+        "petsAllowed": "Pets allowed",
+        "smokingAllowed": "Smoking allowed"
+      },
+      "contact": {
+        "title": "Contact",
+        "phone": "Phone",
+        "email": "Email",
+        "address": "Address"
+      },
+      "footer": {
+        "rights": "All rights reserved."
+      }
+    }
+  }
+}
