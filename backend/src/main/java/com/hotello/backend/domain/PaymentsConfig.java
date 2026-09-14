@@ -1,5 +1,8 @@
 package com.hotello.backend.domain;
 
+import com.hotello.backend.crypto.EncryptedStringConverter;
+import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -13,8 +16,12 @@ public class PaymentsConfig {
 
     private String stripePublishableKey;
 
+    @Convert(converter = EncryptedStringConverter.class)
+    @Column(columnDefinition = "text")
     private String stripeSecretKey;
 
+    @Convert(converter = EncryptedStringConverter.class)
+    @Column(columnDefinition = "text")
     private String stripeWebhookSecret;
 
     private boolean bankTransferAccepted;

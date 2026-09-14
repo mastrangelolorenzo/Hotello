@@ -1,5 +1,8 @@
 package com.hotello.backend.domain;
 
+import com.hotello.backend.crypto.EncryptedStringConverter;
+import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -15,6 +18,8 @@ public class EmailConfig {
 
     private String smtpUser;
 
+    @Convert(converter = EncryptedStringConverter.class)
+    @Column(columnDefinition = "text")
     private String smtpPassword;
 
     private boolean tls;

@@ -1,5 +1,8 @@
 package com.hotello.backend.domain;
 
+import com.hotello.backend.crypto.EncryptedStringConverter;
+import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -33,8 +36,12 @@ public class FiscalData {
 
     private String alloggiatiUsername;
 
+    @Convert(converter = EncryptedStringConverter.class)
+    @Column(columnDefinition = "text")
     private String alloggiatiPassword;
 
+    @Convert(converter = EncryptedStringConverter.class)
+    @Column(columnDefinition = "text")
     private String alloggiatiWsKey;
 
     private boolean touristTaxActive;
